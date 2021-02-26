@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block nav  %}
+
+<ul class="list-unstyled components mb-5">
+
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/create">Create New page</a>
+    </li>
+    <li>
+        <a href="/randompage">Random page</a>
+    </li>
+    <li class="active">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li class="active">
+                <a href="/aboutWebapp"> Webapp</a>
+            </li>
+            <li>
+                <a href="/aboutDevloper">Devloper</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock %}
+
+{% block body %}
+<h2 class="mb-4">Webapp</h2>
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 stretch-card">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <p class="card-title">Welcome User</p>
+                        <div class="table-responsive">
+                            <div id="accordionExample" class="accordion shadow">
+                                <div class="card">
+                                    
+                                    <div aria-labelledby="headingOne">
+                                        <div class="card-body p-5">
+                                            <p class="para " style="font-size: 1.1rem; font-weight: bold">Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                                                cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et.Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                                                cupidatat skateboard dolor brunch.ua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    {% endblock %}

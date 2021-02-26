@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block nav  %}
+{% load static %}
+<ul class="list-unstyled components mb-5">
+
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/create">Create New page</a>
+    </li>
+    <li>
+        <a href="/randompage">Random page</a>
+    </li>
+    <li class="active">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+                <a href="/aboutWebapp"> Webapp</a>
+            </li>
+            <li class="active">
+                <a href="/aboutDevloper">Devloper</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock %}
+
+{% block body %}
+
+<div class="table-responsive">
+
+    <div id="accordionExample" class="accordion shadow">
+
+        <!-- Accordion item 1 -->
+        <div class="card">
+            <div id="headingOne" class="card-header bg-white shadow-sm border-2">
+                <h4 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="false" aria-controls="collapseOne"
+                        class="d-block position-relative text-dark text-uppercase collapsible-link py-2 btn btn-success ">Lalit
+                        Patidar + </a>
+                </h4>
+            </div>
+            <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5">
+
+
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="mr-auto">
+                                    <h4 class="modal-title" id="myModalLabel"> About Lalit
+                                        Patidar</h4>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="card-body">
+                                    <div class="card-title mb-4">
+                                        <div class="d-flex justify-content-start">
+                                            <div class="image-container">
+                                                <img src="{% static 'images/logo.png' %}" id="imgProfile"
+                                                    style="width: 150px; height: 150px" class="img-thumbnail" />
+                                            </div>
+                                            <div class="userData ml-3">
+                                                <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold">
+                                                    Lalit Patidar</h2>
+                                                <h6 class="d-block">Email
+                                                    <span>lalitpatidar****@gmail.com</span>
+                                                </h6>
+                                                <h6 class="d-block">mobile :
+                                                    <span>9399XXXXX79</span></h6>
+                                                <h6 class="d-block">College:
+                                                    <span>IES/IPS</span></h6>
+                                                <h6 class="d-block">Youtuber:
+                                                    <span>||||||||||</span></h6>
+                                                <h6 class="d-block">Country: <span>
+                                                        India</span></h6>
+
+                                            </div>
+                                            <div class="ml-auto">
+                                                <input type="button" class="btn btn-primary d-none" id="btnDiscard"
+                                                    value="Discard Changes" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+
+
+
+
+                                            <div class="row">
+                                                <div class="col-sm-3 col-md-3 col-5">
+                                                    <label style="font-weight:bold;">Full
+                                                        Name</label>
+                                                </div>
+                                                <div class="col-md-9 col-6">
+                                                    Lalit patidar
+                                                </div>
+                                            </div>
+                                            <hr />
+
+                                            <div class="row">
+                                                <div class="col-sm-3 col-md-3 col-5">
+                                                    <label style="font-weight:bold;">Birth
+                                                        Date</label>
+                                                </div>
+                                                <div class="col-md-9 col-6">
+                                                    19-12-1999
+                                                </div>
+                                            </div>
+                                            <hr />
+
+
+                                            <div class="row">
+                                                <div class="col-sm-3 col-md-12 col-5">
+                                                    <label style="font-weight:bold; ">About
+                                                        (Bio)</label>
+                                                </div>
+                                                <p class="col-md-12 col-5" style="overflow-wrap: break-word;">
+                                                    enim eiusmod high life accusamus terry
+                                                    richardson ad squid. 3 wolf moon officia
+                                                    aute, non cupidatat skateboard dolor
+                                                    brunch. Food truck quinoa nesciunt
+                                                    laborum eiusmod. Brunch 3 wolf moon
+                                                    tempor, sunt aliqua put a bird on it
+                                                    squid single-origin coffee nulla
+                                                    assumenda shoreditch et.
+
+                                                </p>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-3 col-md-3 col-5">
+                                                    <label style="font-weight:bold;">State</label>
+                                                </div>
+                                                <div class="col-md-9 col-6">
+                                                    Madhya Pradesh
+                                                </div>
+                                            </div>
+                                            <hr />
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

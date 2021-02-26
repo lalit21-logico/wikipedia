@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block nav  %}
+<ul class="list-unstyled components mb-5">
+
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li class="active">
+        <a href="/create">Create New page</a>
+    </li>
+    <li>
+        <a href="/randompage">Random page</a>
+    </li>
+    <li>
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+                <a href="/aboutWebapp"> Webapp</a>
+            </li>
+            <li>
+                <a href="/aboutDevloper">Devloper</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="mt-2 pt-5 log-cont">
+        <form class="form-signin bg-dark iwhite my-5 p-4" action="/send" method="post">
+            {% csrf_token%}
+            <h1 class="h4 mb-3 font-weight-normal mt-2">Create Wonderfull Pages for Encyclopedia </h1>
+
+            <label for="username" class="sr-only">Heading</label>
+            <input class="form-control" type="text" placeholder="Heading" autofocus required name="heading">
+            <br><br>
+            <input class="form-control" type="text" placeholder="Sub-Heading" name="subheading" required>
+            <br><br>
+            <input class="form-control" type="text" placeholder="Discription" name="discription" required> </h3>
+            <br><br>
+
+            <button class=" mb-3 btn btn-lg btn-primary btn-block" type="submit" id="btn" value="Add">Add</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

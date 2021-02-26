@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block nav  %}
+
+<ul class="list-unstyled components mb-5">
+
+    <li class="active">
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/create">Create New page</a>
+    </li>
+    <li>
+        <a href="/randompage">Random page</a>
+    </li>
+    <li>
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li >
+                <a href="/aboutWebapp"> Webapp</a>
+            </li>
+            <li>
+                <a href="/aboutDevloper">Devloper</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock %}
+
+{% block body %}
+<h2 class="mb-4">Encyclopedia</h2>
+
+<div class="alert alert-success" id="success-alert" role="alert">
+    {{msg}}
+</div>
+
+<div class="list-group">
+    {% for d in data %}
+    <a href="/show?id={{d.ID}}" class="list-group-item list-group-item-action list-group-item-info">{{d.heading}}</a>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

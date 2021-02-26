@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+
+{% block nav  %}
+<ul class="list-unstyled components mb-5">
+	          
+    <li >
+        <a href="/">Home</a>
+    </li>
+    <li >
+    <a href="/create">Create New page</a>
+    </li>
+    <li>
+    <a href="/randompage">Random page</a>
+    </li>
+    <li >
+      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">About</a>
+      <ul class="collapse list-unstyled" id="homeSubmenu">
+        <li >
+            <a href="/aboutWebapp"> Webapp</a>
+        </li>
+        <li>
+            <a href="/aboutDevloper">Devloper</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+{% endblock %}
+
+{% block body %}
+
+
+<form action="/editrecord" method="post">
+    {% csrf_token%}
+    <input type="hidden"  name="ID" value="{{ID}}" >
+    <h3>Heading <input type="text" autofocus required name="heading" value="{{heading}}" ></h3>
+    <h3> Sub-heading <input type="text" name="subheading" required value="{{subheading}}"> </h3>  
+    <h3> Discription <input type="text" name="discription" required value="{{discription}}"> </h3>
+    <input type="submit" id="btn" value="Save changes" >
+</form>
+    
+{% endblock %}
